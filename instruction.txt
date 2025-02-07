@@ -1,0 +1,45 @@
+Based on Google Cloud Platform (GCP). 
+
+The project is due by February 8 and consists of three main steps:
+
+Configuration of GCP resources: Creation of Cloud Storage bucket and BigQuery table.
+Creation of the Python script: Analysis, cleaning and classification of data in the appropriate folders.
+Load data into BigQuery.
+
+Step 1: Configuring GCP resources
+1.1 Create a Cloud Storage bucket
+Create a bucket named m2dsia-[last name]-[first name]-data, for example m2dsia-diallo-saikou-oumar-data. Inside, create three folders:
+input/ : Contains raw files.
+clean/ : Contains cleaned data.
+error/ : Contains data with errors.
+done/ : Contains data already loaded on bigquery.
+1.2 Creating a BigQuery table
+Create a BigQuery dataset in [project_id].dataset_[first_name] format.
+Then create a table [project_id].dataset_[first_name].transactions
+With a schema corresponding to your data.transaction_id of type INT64 Description: Unique identifier 
+product_name of type STRING NOT NULL, -- Product name 
+category of type STRING NOT NULL, -- Product category 
+price of type FLOAT64 NOT NULL, -- Price per unit 
+quantity type INT64 NOT NULL, -- Quantity purchased 
+date type DATE NOT NULL, -- Transaction date 
+customer_name of type STRING, -- Customer name 
+customer_email of type STRING -- Customer's e-mail address
+Partitioned by date
+Cluster by category and product_name
+Step 2: Creating the Python script
+2.1 A Python script performs the following steps:
+Retrieve files from the input folder.
+Validate and clean data.
+Move files to clean/ or error/.
+2.2 Python script To insert data:
+Load cleaned data into BigQuery.
+Move file to folder done
+Here's what I did for the first part. I created my bucket with all the requested folders and my bigquery database and transaction table. here are the configurations.
+# Basic configuration
+PROJECT_ID = “isi-group-m2-dsia
+BUCKET_NAME = “m2dsia-ndao-ibrahima-data”
+DATASET_ID = f"{PROJECT_ID}.dataset_ndao_ibrahima”
+TABLE_ID = f"{DATASET_ID}.transactions”
+create all the folders and files needed for this project.
+Et n'oublie pas de mettre un fichier readme bien expliquer les etapes de mon projet 
+i have a transactions.csv file in my input folder in my bucket
