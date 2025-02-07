@@ -1,5 +1,14 @@
 # Pipeline de Traitement de Données GCP
 
-Ce projet implémente un pipeline de traitement de données utilisant les services Google Cloud Platform (GCP). Il traite les fichiers de transactions, les valide et les charge dans BigQuery.
+## 📋 Description
+Ce projet implémente un pipeline automatisé de traitement de données utilisant Google Cloud Platform (GCP). Il permet de gérer, valider et charger des données de transactions commerciales de manière automatisée et sécurisée.
+
+## 🏗️ Architecture du Projet
+
+### Services GCP Utilisés
+- **Cloud Storage**: Stockage et gestion des fichiers CSV
+- **BigQuery**: Base de données analytique pour l'exploitation des données
+
+### Structure des Dossiers Cloud Storage
 
 ## Structure du Projet 
