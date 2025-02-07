@@ -1,5 +1,5 @@
-# GCP Data Processing Pipeline
+# Pipeline de Traitement de Données GCP
 
-This project implements a data processing pipeline using Google Cloud Platform (GCP) services. It processes transaction data files, validates them, and loads them into BigQuery.
+Ce projet implémente un pipeline de traitement de données utilisant les services Google Cloud Platform (GCP). Il traite les fichiers de transactions, les valide et les charge dans BigQuery.
 
-## Project Structure 
+## Structure du Projet 
